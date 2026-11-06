@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hadal-showcase
+    runtime: static
+    buildCommand: echo static site
+    staticPublishPath: .
+    autoDeploy: true
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
